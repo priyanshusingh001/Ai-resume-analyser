@@ -21,9 +21,8 @@ const uploadResume = async (req, res) => {
     }
 
     // Read PDF
-    const dataBuffer = fs.readFileSync(
-      req.file.path
-    );
+    const dataBuffer =
+  req.file.buffer;
 
     // Extract Text
     const pdfData = await pdf(
